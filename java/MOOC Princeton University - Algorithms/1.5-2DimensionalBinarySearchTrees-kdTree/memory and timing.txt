@@ -1,0 +1,144 @@
+
+******************************************************************************
+*          MEMORY
+******************************************************************************
+
+Computing memory of KdTree
+*-----------------------------------------------------------
+Running 8 total tests.
+
+Memory usage of a KdTree with N points (including Point2D and RectHV objects).
+Maximum allowed memory is 312N + 192 bytes.
+
+                 N       student (bytes)    reference (bytes)
+--------------------------------------------------------------
+=> passed        1          144                160
+=> passed        2          240                288
+=> passed        5          528                672
+=> passed       10         1008               1312
+=> passed       25         2448               3232
+=> passed      100         9648              12832
+=> passed      400        38448              51232
+=> passed      800        76848             102432
+==> 8/8 tests passed
+
+Total: 8/8 tests passed!
+
+Estimated student   memory (bytes) = 96.00 N + 48.00  (R^2 = 1.000)
+Estimated reference memory (bytes) = 128.00 N + 32.00  (R^2 = 1.000)
+================================================================
+
+******************************************************************************
+*          TIMING
+******************************************************************************
+
+Timing PointSET
+*-----------------------------------------------------------
+Running 14 total tests.
+
+Inserting N points into a PointSET.
+
+               N      ops per second
+----------------------------------------
+=> passed   160000    1542336         
+=> passed   320000    1670761         
+=> passed   640000    1329124         
+=> passed  1280000    1032349         
+==> 4/4 tests passed
+
+Performing contains() queries after inserting N points into a PointSET.
+
+               N      ops per second
+----------------------------------------
+=> passed   160000     617006         
+=> passed   320000     582951         
+=> passed   640000     480456         
+=> passed  1280000     458621         
+==> 4/4 tests passed
+
+Performing range() queries after inserting N points into a PointSET.
+
+               N      ops per second
+----------------------------------------
+=> passed    10000       9619         
+=> passed    20000       4347         
+=> passed    40000       1949         
+==> 3/3 tests passed
+
+Performing nearest() queries after inserting N points into a PointSET.
+
+               N      ops per second
+----------------------------------------
+=> passed    10000       4826         
+=> passed    20000       2255         
+=> passed    40000       1003         
+==> 3/3 tests passed
+
+Total: 14/14 tests passed!
+
+================================================================
+
+Timing KdTree
+*-----------------------------------------------------------
+Running 28 total tests.
+
+Inserting N points into a 2d tree. The table gives the average number of calls 
+to methods in RectHV and Point per call to insert().
+                                                               Point2D
+               N      ops/second     RectHV()    x()    y()    equals()
+-----------------------------------------------------------------------------
+=> passed   160000     2170052          0.0     1.0     1.0     0.0         
+=> passed   320000     2755136          0.0     1.0     1.0     0.0             
+=> passed   640000     2272070          0.0     1.0     1.0     0.0              
+=> passed  1280000     1716219          0.0     1.0     1.0     0.0                
+==> 4/4 tests passed
+
+Performing contains() queries after inserting N points into a 2d tree. The table
+gives the average number of calls to methods in RectHV and Point per call to 
+contain().
+                                                       Point2D
+               N      ops/second        x()     y()    equals()
+------------------------------------------------------------------------------
+=> passed    10000     749007           1.0     1.0     0.0         
+=> passed    20000     817038           1.0     1.0     0.0      
+=> passed    40000     795087           1.0     1.0     0.0       
+=> passed    80000     763369           1.0     1.0     0.0            
+=> passed   160000     741308           1.0     1.0     0.0       
+=> passed   320000     691244           1.0     1.0     0.0       
+=> passed   640000     595454           1.0     1.0     0.0        
+=> passed  1280000     531544           1.0     1.0     0.0     
+==> 8/8 tests passed
+
+Performing range() queries after inserting N points into a 2d tree. The table 
+gives the average number of calls to methods in RectHV and Point per call to 
+range().
+               N      ops/second    intersects()   contains()    x()     y()
+------------------------------------------------------------------------------
+=> passed    10000     437709           0.0           7.1        12.9    7.7         
+=> passed    20000     500884           0.0           7.5        14.0    9.5         
+=> passed    40000     438058           0.0           8.4        15.0    8.6         
+=> passed    80000     406285           0.0           8.6        15.5    8.9         
+=> passed   160000     424410           0.0           9.1        17.1   11.2         
+=> passed   320000     330334           0.0           8.2        15.0    9.3         
+=> passed   640000     251419           0.0           8.9        16.5   10.7         
+=> passed  1280000     201897           0.0           9.4        16.5    8.6         
+==> 8/8 tests passed
+
+Performing nearest() queries after inserting N points into a 2d tree. The table
+gives the average number of calls to methods in RectHV and Point per call 
+to nearest().
+               N     ops/second         x()     y()
+------------------------------------------------------------------------------
+=> passed    10000    556256            25.3    25.3         
+=> passed    20000    560890            27.8    27.8         
+=> passed    40000    517684            32.6    32.6         
+=> passed    80000    495431            33.3    33.3         
+=> passed   160000    462997            36.1    36.1         
+=> passed   320000    351157            37.5    37.5         
+=> passed   640000    319662            39.0    39.0         
+=> passed  1280000    263025            43.5    43.5         
+==> 8/8 tests passed
+
+Total: 28/28 tests passed!
+
+================================================================

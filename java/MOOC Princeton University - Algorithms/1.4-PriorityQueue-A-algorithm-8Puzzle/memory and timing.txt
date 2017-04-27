@@ -1,0 +1,66 @@
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Board
+*-----------------------------------------------------------
+Running 8 total tests.
+
+Memory usage of an N-by-N board
+
+              N       student (bytes)    reference (bytes)
+----------------------------------------------------------
+=> passed     4           128                  240
+=> passed     8           320                  560
+=> passed    12           640                 1008
+=> passed    16          1088                 1584
+=> passed    20          1664                 2288
+=> passed    36          5248                 6384
+=> passed    72         20800                23088
+=> passed   120         57664                61488
+==> 8/8 tests passed
+
+Total: 8/8 tests passed!
+
+Student   memory = 4.00 N^2 + 0.00 N + 64.00   (R^2 = 1.000)
+Reference memory = 4.00 N^2 + 32.00 N + 48.00   (R^2 = 1.000)
+
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Solver
+*-----------------------------------------------------------
+Running 17 total tests.
+
+Timing tests use your implementation of Board.java and Solver.java.
+Maximum time allowed per puzzle is 10 seconds.
+
+               filename   N    seconds    insert()            delMin()         max PQ size
+---------------------------------------------------------------------------------------------
+=> passed  puzzle20.txt   3     0.02        607                 361                 246         
+=> passed  puzzle21.txt   3     0.01        969                 576                 393         
+=> passed  puzzle22.txt   3     0.01       1579                 934                 645         
+=> passed  puzzle23.txt   3     0.01       2205                1314                 891         
+=> passed  puzzle24.txt   3     0.01       1236                 749                 487         
+=> passed  puzzle25.txt   3     0.01       3927                2359                1568         
+=> passed  puzzle26.txt   3     0.00       2828                1713                1115         
+=> passed  puzzle27.txt   3     0.00       2952                1805                1147         
+=> passed  puzzle28.txt   3     0.01       7800                4759                3041         
+=> passed  puzzle29.txt   3     0.01       5406                3336                2070         
+=> passed  puzzle30.txt   3     0.02      16955               10355                6600         
+=> passed  puzzle31.txt   3     0.02      20022               12303                7719         
+=> passed  puzzle34.txt   4     0.06      72222               34743               37479         
+=> passed  puzzle37.txt   4     0.02      31466               15134               16332         
+=> passed  puzzle39.txt   4     0.01      20233               10047               10186         
+=> passed  puzzle41.txt   5     0.01      14138                6075                8063         
+=> passed  puzzle44.txt   5     0.04      76973               34422               42551         
+==> 17/17 tests passed
+
+Total: 17/17 tests passed!
+
+================================================================

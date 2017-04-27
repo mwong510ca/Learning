@@ -1,0 +1,373 @@
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Subset
+*-----------------------------------------------------------
+Running 2 total tests.
+
+Test 1: Check that only one Deque or RandomizedQueue object is created
+  * filename = subset9.txt, N = 9, k = 1
+  * filename = subset9.txt, N = 9, k = 2
+  * filename = subset9.txt, N = 9, k = 4
+  * filename = tinyTale.txt, N = 12, k = 10
+  * filename = tale.txt, N = 138653, k = 50
+==> passed
+
+Test 2: Check that the maximum size of any Deque or RandomizedQueue object
+        created is <= N
+  * filename = subset9.txt, N = 9, k = 1
+  * filename = subset9.txt, N = 9, k = 2
+  * filename = subset9.txt, N = 9, k = 4
+  * filename = tinyTale.txt, N = 12, k = 10
+  * filename = tale.txt, N = 138653, k = 5
+  * filename = tale.txt, N = 138653, k = 50
+  * filename = tale.txt, N = 138653, k = 500
+  * filename = tale.txt, N = 138653, k = 5000
+  * filename = tale.txt, N = 138653, k = 50000
+==> passed
+
+Test 3 (bonus): Check that maximum size of any or Deque or RandomizedQueue object
+                created is <= k
+  * filename = tale.txt, N = 138653, k = 5
+  * filename = tale.txt, N = 138653, k = 50
+  * filename = tale.txt, N = 138653, k = 500
+  * filename = tale.txt, N = 138653, k = 5000
+  * filename = tale.txt, N = 138653, k = 50000
+==> passed
+
+Total: 3/2 tests passed!
+
+================================================================
+
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Deque
+*-----------------------------------------------------------
+For tests 1-4, the maximum amount of memory allowed for a deque
+containing N items is 48N + 192.
+
+Running 28 total tests.
+
+Test 1a-1e: Total memory usage after inserting N items,
+            where N is a power of 2.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed        8          424         
+=> passed       64         3112         
+=> passed      256        12328         
+=> passed     1024        49192         
+=> passed     4096       196648         
+==> 5/5 tests passed
+
+Memory: 48.00 N + 40.00   (R^2 = 1.000)
+
+Test 2a-2e: Total memory usage after inserting N+1 items,
+            where N is a power of 2.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed        8          472         
+=> passed       64         3160         
+=> passed      256        12376         
+=> passed     1024        49240         
+=> passed     4096       196696         
+==> 5/5 tests passed
+
+Memory after adding N = 2^i + 1 items: 48.00 N + 40.00   (R^2 = 1.000)
+
+Test 3a-3e: Total memory usage after inserting 2N+1 items
+            and deleting N items, where N is a power of 2.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed        8          472         
+=> passed       64         3160         
+=> passed      256        12376         
+=> passed     1024        49240         
+=> passed     4096       196696         
+==> 5/5 tests passed
+
+Memory: 48.00 N + 40.00   (R^2 = 1.000)
+
+Test 4a-4e: Total memory usage after inserting N items and then
+            deleting all but one item, where N is a power of 2.
+            (should not grow with N or be too large of a constant)
+
+                 N        bytes
+----------------------------------------------------------
+=> passed        8           88         
+=> passed       64           88         
+=> passed      256           88         
+=> passed     1024           88         
+=> passed     4096           88         
+==> 5/5 tests passed
+
+Memory after adding N = 2^i items: 88.00   (R^2 = 1.000)
+
+Test 5a-5e: Total memory usage of iterator after inserting N items.
+            (should not grow with N or be too large of a constant)
+
+                 N        bytes
+----------------------------------------------------------
+=> passed        8           40         
+=> passed       64           40         
+=> passed      256           40         
+=> passed     1024           40         
+=> passed     4096           40         
+==> 5/5 tests passed
+
+Memory of iterator after adding N = 2^i items: 40.00   (R^2 = 1.000)
+
+Test 6a: Insert N strings; delete them one at a time, checking for
+         loitering after each deletion. The probabilities of addFirst()
+         and addLast() are (p1, p2), respectively. The probabilities of
+         removeFirst() and removeLast() are (q1, q2), respectively
+  * 100 random insertions (1.0, 0.0) and 100 random deletions (1.0, 0.0)
+  * 100 random insertions (1.0, 0.0) and 100 random deletions (0.0, 1.0)
+  * 100 random insertions (0.0, 1.0) and 100 random deletions (1.0, 0.0)
+  * 100 random insertions (0.0, 1.0) and 100 random deletions (0.0, 1.0)
+  * 100 random insertions (0.5, 0.5) and 100 random deletions (0.5, 0.5)
+==> passed
+
+Test 6b: Perform random operations, checking for loitering after
+         each operation. The probabilities of addFirst(), addLast(),
+         removeFirst(), and removeLast() are (p1, p2, p3, p4),
+         respectively.
+  * 100 random operations (0.8, 0.0, 0.2, 0.0)
+  * 100 random operations (0.8, 0.0, 0.0, 0.2)
+  * 100 random operations (0.0, 0.8, 0.2, 0.0)
+  * 100 random operations (0.0, 0.8, 0.0, 0.2)
+  * 100 random operations (0.4, 0.4, 0.1, 0.1)
+  * 100 random operations (0.2, 0.2, 0.3, 0.3)
+==> passed
+
+Test 7: Worst-case constant memory allocated or deallocated
+        per deque operation?
+  * 128 random operations
+  * 256 random operations
+  * 512 random operations
+==> passed
+
+Total: 28/28 tests passed!
+
+================================================================
+
+Computing memory of RandomizedQueue
+*-----------------------------------------------------------
+For tests 1-4, the maximum amount of memory allowed for a
+randomized queue containing N items is 48N + 192.
+
+Running 23 total tests.
+
+Test 1a-1d: Total memory usage after inserting N integers.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed       64          640         
+=> passed      256         2176         
+=> passed     1024         8320         
+=> passed     4096        32896         
+==> 4/4 tests passed
+
+Memory: 8.00 N + 128.00   (R^2 = 1.000)
+
+Test 2a-2d: Total memory usage after inserting N+1 items.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed       64         1152         
+=> passed      256         4224         
+=> passed     1024        16512         
+=> passed     4096        65664         
+==> 4/4 tests passed
+
+Memory: 16.00 N + 112.00   (R^2 = 1.000)
+
+Test 3a-3d: Total memory usage after inserting 2N+1 items, and
+            then deleting N items.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed       64         2176         
+=> passed      256         8320         
+=> passed     1024        32896         
+=> passed     4096       131200         
+==> 4/4 tests passed
+
+Memory: 32.00 N + 96.00   (R^2 = 1.000)
+
+Test 4a-4d: Total memory usage after inserting N items, and
+            then deleting all but one item.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed       64          192         
+=> passed      256          192         
+=> passed     1024          192         
+=> passed     4096          192         
+==> 4/4 tests passed
+
+Memory: 192.00   (R^2 = 1.000)
+
+Test 5a-5d: Total memory usage of iterator after inserting N items.
+
+                 N        bytes
+----------------------------------------------------------
+=> passed       64          576         
+=> passed      256         2112         
+=> passed     1024         8256         
+=> passed     4096        32832         
+==> 4/4 tests passed
+
+Memory: 8.00 N + 64.00   (R^2 = 1.000)
+
+Test 6a: Insert 100 strings; delete them one at a time, checking
+         for loitering after each deletion.
+==> passed
+
+Test 6b: Perform random operations, checking for loitering after
+         each operation. The probabilities of enqueue(), dequeue(),
+         and sample() are (p1, p2, p3), respectively.
+  * 200 random operations (0.8, 0.2, 0.0)
+  * 200 random operations (0.2, 0.8, 0.0)
+  * 200 random operations (0.6, 0.2, 0.2)
+  * 200 random operations (0.2, 0.4, 0.4)
+==> passed
+
+Test 7: Insert T items into queue; then iterate over queue and check
+        that worst-case constant memory is allocated or deallocated
+        per iterator operation.
+  * T = 64
+  * T = 128
+  * T = 256
+==> passed
+
+Total: 23/23 tests passed!
+
+================================================================
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Deque
+*-----------------------------------------------------------
+Running 31 total tests.
+
+Test 1a-1g:  N random calls to addFirst(), addLast(), removeFirst(),
+             and removeLast().
+
+                    N  seconds
+------------------------------
+=> passed        1024     0.00
+=> passed        2048     0.00
+=> passed        4096     0.00
+=> passed        8192     0.00
+=> passed       16384     0.01
+=> passed       32768     0.01
+=> passed       65536     0.01
+=> passed      128000     0.01
+=> passed      256000     0.02
+=> passed      512000     0.04
+=> passed     1024000     0.14
+=> passed     2048000     0.22
+==> 12/12 tests passed
+
+Test 2a-2g:  Create deque of N objects, then iterate over the N objects
+             by calling next() and hasNext().
+
+                    N  seconds
+------------------------------
+=> passed        1024     0.00
+=> passed        2048     0.00
+=> passed        4096     0.00
+=> passed        8192     0.00
+=> passed       16384     0.00
+=> passed       32768     0.00
+=> passed       65536     0.00
+=> passed      128000     0.01
+=> passed      256000     0.01
+=> passed      512000     0.01
+=> passed     1024000     0.03
+=> passed     2048000     0.06
+==> 12/12 tests passed
+
+Test 3a-3g:  Create deque of N objects, then interleave N calls each to
+             removeFirst()/removeLast() and addFirst()/addLast().
+
+                    N  seconds
+----------------------------------
+=> passed        1025     0.00
+=> passed        2049     0.00
+=> passed        4097     0.00
+=> passed       16385     0.01
+=> passed       32767     0.01
+=> passed       32768     0.01
+=> passed       32769     0.01
+==> 7/7 tests passed
+
+Total: 31/31 tests passed!
+================================================================
+
+Timing RandomizedQueue
+*-----------------------------------------------------------
+Running 31 total tests.
+
+Test 1a-1g:  N random calls to enqueue(), sample(), dequeue(),
+             isEmpty(), and size().
+
+                    N  seconds
+----------------------------------
+=> passed        1024     0.00
+=> passed        2048     0.00
+=> passed        4096     0.00
+=> passed        8192     0.00
+=> passed       16384     0.00
+=> passed       32768     0.01
+=> passed       65536     0.01
+=> passed      128000     0.02
+=> passed      256000     0.03
+=> passed      512000     0.05
+=> passed     1024000     0.15
+=> passed     2048000     0.31
+==> 12/12 tests passed
+
+Test 2a-2g:  Create randomized queue of N objects, then iterate
+             over the N objects by calling next() and hasNext().
+
+                    N  seconds
+----------------------------------
+=> passed        1024     0.00
+=> passed        2048     0.00
+=> passed        4096     0.00
+=> passed        8192     0.00
+=> passed       16384     0.00
+=> passed       32768     0.00
+=> passed       65536     0.01
+=> passed      128000     0.01
+=> passed      256000     0.02
+=> passed      512000     0.03
+=> passed     1024000     0.09
+=> passed     2048000     0.24
+==> 12/12 tests passed
+
+Test 3a-3g:  Create randomized queue of N objects, then interleave
+             N calls each to dequeue() and enqueue().
+
+                    N  seconds
+----------------------------------
+=> passed        1025     0.00
+=> passed        2049     0.00
+=> passed        4097     0.00
+=> passed       16385     0.00
+=> passed       32767     0.00
+=> passed       32768     0.00
+=> passed       32769     0.00
+==> 7/7 tests passed
+
+Total: 31/31 tests passed!
+================================================================

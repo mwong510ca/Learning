@@ -1,0 +1,108 @@
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Point
+*-----------------------------------------------------------
+The maximum amount of memory per Point object is 32 bytes.
+Student memory = 24 bytes (passed)
+
+******************************************************************************
+*          TIMING
+******************************************************************************
+
+Timing BruteCollinearPoints
+*-----------------------------------------------------------
+Running 10 total tests.
+
+Test 1a-1e: Find collinear points among N random distinct points
+                                                     slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    16   0.01         546           0            546                  105         
+=> passed    32   0.00        4930           0           4930                  277         
+=> passed    64   0.00       41602           0          41602                  671         
+=> passed   128   0.01      341250           0         341250                 1607         
+=> passed   256   0.03     2763266           0        2763266                 3743         
+
+Test 2a-2e: Find collinear points among N/4 arbitrary line segments
+                                                      slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    16   0.00         638           0            638                  107         
+=> passed    32   0.00        5328           0           5328                  279         
+=> passed    64   0.00       43175           0          43175                  687         
+=> passed   128   0.01      347441           0         347441                 1605         
+=> passed   256   0.03     2790351           0        2790351                 3725         
+
+Total: 10/10 tests passed!
+
+================================================================
+
+Timing FastCollinearPoints
+*-----------------------------------------------------------
+Running 31 total tests.
+
+Test 1a-1g: Find collinear points among N random distinct points
+                                                     slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    64   0.02        2015           0           2015                  673         
+=> passed   128   0.00        8127           0           8127                 1617         
+=> passed   256   0.01       32639           0          32639                 3687         
+=> passed   512   0.02      130815           0         130815                 8421         
+=> passed  1024   0.09      523775           0         523775                18999         
+=> passed  2048   0.28     2096124           0        2096124                41995         
+
+lg ratio(slopeTo() + 2*compare()) = lg (2096124 / 523775) = 2.00
+=> passed
+
+Test 2a-2g: Find collinear points among the N points on an N-by-1 grid
+
+                                                      slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    64   0.00          63           0             63                  679         
+=> passed   128   0.00         127           0            127                 1597         
+=> passed   256   0.00         255           0            255                 3715         
+=> passed   512   0.00         511           0            511                 8475         
+=> passed  1024   0.01        1023           0           1023                19003         
+=> passed  2048   0.03        2047           0           2047                41999         
+=> passed  4096   0.10        4095           0           4095                92183         
+
+lg ratio(slopeTo() + 2*compare()) = lg (4095 / 2047) = 1.00
+=> passed
+
+Test 3a-3g: Find collinear points among the N points on an N/4-by-4 grid
+                                                      slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    64   0.00        1338           0           1338                  681         
+=> passed   128   0.00        5242           0           5242                 1611         
+=> passed   256   0.00       20730           0          20730                 3723         
+=> passed   512   0.01       82426           0          82426                 8459         
+=> passed  1024   0.04      328698           0         328698                18975         
+=> passed  2048   0.11     1312762           0        1312762                41983         
+=> passed  4096   0.43     5246970           0        5246970                92219         
+
+lg ratio(slopeTo() + 2*compare()) = lg (5246970 / 1312762) = 2.00
+=> passed
+
+Test 4a-4g: Find collinear points among the N points on an N/8-by-8 grid
+                                                     slopeTo()
+             N    time     slopeTo()   compare()  + 2*compare()        compareTo()
+-----------------------------------------------------------------------------------------------
+=> passed    64   0.00        1382           0           1382                  675         
+=> passed   128   0.00        5464           0           5464                 1615         
+=> passed   256   0.00       21660           0          21660                 3753         
+=> passed   512   0.01       86196           0          86196                 8489         
+=> passed  1024   0.03      343818           0         343818                18967         
+=> passed  2048   0.13     1373290           0        1373290                42013         
+=> passed  4096   0.48     5489126           0        5489126                92255         
+
+lg ratio(slopeTo() + 2*compare()) = lg (5489126 / 1373290) = 2.00
+=> passed
+
+Total: 31/31 tests passed!
+
+================================================================

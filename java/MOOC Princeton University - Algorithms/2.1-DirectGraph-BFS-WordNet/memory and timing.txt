@@ -1,0 +1,171 @@
+******************************************************************************
+*          MEMORY
+******************************************************************************
+
+Computing memory of SAP
+*-----------------------------------------------------------
+Running 1 total tests.
+
+student     memory    = 1158712 bytes
+reference   memory    = 10320648 bytes
+ratio                 = 0.11
+maximum allowed ratio = 2.50
+
+vertices = 82192
+edges    = 84505
+
+Total: 1/1 tests passed!
+
+================================================================
+
+Computing memory of WordNet
+*-----------------------------------------------------------
+Running 3 total tests.
+
+Test 1a: test memory of WordNet object
+  *  synsets = synsets1000-subgraph.txt; hypernyms = hypernyms1000-subgraph.txt
+     -  student   memory = 440072 bytes
+     -  reference memory = 1222920 bytes
+     -  number vertices  = 1000
+     -  number of edges  = 1008
+     -  student / reference ratio  =  0.4
+     -  maximum allowed rato       =  2.0
+
+==> passed
+
+Test 1b: test memory of WordNet object
+  *  synsets = synsets5000-subgraph.txt; hypernyms = hypernyms5000-subgraph.txt
+     -  student   memory = 2139296 bytes
+     -  reference memory = 6071856 bytes
+     -  number vertices  = 5000
+     -  number of edges  = 5059
+     -  student / reference ratio  =  0.4
+     -  maximum allowed rato       =  2.0
+
+==> passed
+
+Test 1c: test memory of WordNet object
+  *  synsets = synsets10000-subgraph.txt; hypernyms = hypernyms10000-subgraph.txt
+     -  student   memory = 5305224 bytes
+     -  reference memory = 14094304 bytes
+     -  number vertices  = 10000
+     -  number of edges  = 10087
+     -  student / reference ratio  =  0.4
+     -  maximum allowed rato       =  2.0
+
+==> passed
+
+Total: 3/3 tests passed!
+
+================================================================
+
+******************************************************************************
+*          TIMING
+******************************************************************************
+
+Timing SAP
+*-----------------------------------------------------------
+Running 7 total tests.
+
+Test 1: time SAP constructor
+   *  digraph-wordnet.txt
+      -  student solution time =  0.03 seconds
+      -  maximum allowed  time =  1.00 seconds
+==> passed
+
+Test 2a-c: time length() and ancestor() with random pairs of vertices
+  *  digraph-wordnet.txt
+     -  reference solution calls per second:  743244.00
+     -  student   solution calls per second: 1620716.67
+     -  reference / student ratio:                 0.46
+
+=> BONUS     student <=    50x reference
+=> BONUS     student <=     5x reference
+=> BONUS     student <=   0.5x reference
+
+Test 3a-c: time length() and ancestor() with random sets of 5 vertices
+  *  digraph-wordnet.txt
+     -  reference solution calls per second:  217996.00
+     -  student   solution calls per second:  459519.33
+     -  reference / student ratio:                 0.47
+
+=> BONUS     student <=    20x reference
+=> BONUS     student <=     2x reference
+
+Total: 12/7 tests passed!
+
+================================================================
+
+******************************************************************************
+*          timing (substituting reference SAP.java)
+******************************************************************************
+
+Timing WordNet
+*-----------------------------------------------------------
+Running 8 total tests.
+
+Test 1: timing WordNet constructor
+  *  synsets = synsets.txt; hypernyms = hypernyms.txt
+     -  student constructor time =  1.09 seconds
+     -  maximum allowed     time = 10.00 seconds
+==> passed
+
+Test 2: check that exactly one SAP object created per WordNet object
+==> passed
+
+Test 3a-c: timing sap() and distance() with random nouns
+  *  synsets = synsets.txt; hypernyms = hypernyms.txt
+     -  reference solution calls per second:  158171.80
+     -  student   solution calls per second:  341700.00
+     -  reference / student ratio:                 0.46
+
+=> BONUS     student <=   0.5x reference
+
+Test 4: timing isNoun() with random nouns
+  *  synsets = synsets.txt; hypernyms = hypernyms.txt
+     -  reference solution calls per second:  555195.00
+     -  student   solution calls per second:  767659.00
+     -  reference / student ratio:                 0.72
+     -  allowed ratio:                             2.00
+==> passed
+
+Total: 9/8 tests passed!
+
+================================================================
+
+******************************************************************************
+*          timing (with reference SAP.java and WordNet.java)
+******************************************************************************
+
+Timing Outcast
+*-----------------------------------------------------------
+Running 1 total tests.
+
+1.00 seconds to build WordNet
+
+Computing time to find outcasts of various outcast files.
+Total time must not exceed 1 seconds.
+
+    filename       N     time
+-----------------------------
+   outcast4.txt    4     0.00
+   outcast5.txt    5     0.00
+  outcast5a.txt    5     0.00
+   outcast5.txt    5     0.00
+   outcast7.txt    7     0.00
+   outcast8.txt    8     0.00
+  outcast8a.txt    8     0.00
+  outcast8b.txt    8     0.00
+  outcast8c.txt    8     0.00
+   outcast9.txt    9     0.00
+  outcast9a.txt    9     0.00
+  outcast10.txt   10     0.00
+ outcast10a.txt   10     0.00
+  outcast11.txt   11     0.00
+  outcast12.txt   12     0.00
+ outcast12a.txt   12     0.00
+  outcast20.txt   20     0.00
+  outcast29.txt   29     0.01
+=> passed, total elapsed time: 0.03
+
+Total: 1/1 tests passed!

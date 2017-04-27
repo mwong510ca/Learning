@@ -1,0 +1,101 @@
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing CircularSuffixArray
+*-----------------------------------------------------------
+Tests 1-13: Timing constructor with random ASCII strings of length N
+Max allowed time per constructor call is 10 seconds and <= 3x reference.
+
+                 N    student  reference      ratio
+---------------------------------------------------
+=> passed     1000       0.00       0.00       1.47
+=> passed     2000       0.00       0.00       1.01
+=> passed     4000       0.00       0.00       1.04
+=> passed     8000       0.00       0.00       0.98
+=> passed    16000       0.01       0.01       0.99
+=> passed    32000       0.01       0.01       1.06
+=> passed    64000       0.01       0.01       1.27
+=> passed   128000       0.02       0.02       1.32
+=> passed   256000       0.04       0.03       1.18
+=> passed   512000       0.07       0.07       1.07
+=> passed  1024000       0.16       0.15       1.05
+=> passed  2048000       0.37       0.35       1.07
+=> passed  4096000       0.85       0.81       1.05
+
+Estimated runtime (using last 6 measurements) = 8.40e-08 * N^1.05  (R^2 = 0.99)
+
+
+Tests 14-26: Timing constructor with first N character of dickens.txt
+Max allowed time per constructor call is 10 seconds and <= 3x reference.
+
+                 N    student  reference      ratio
+---------------------------------------------------
+=> passed     1000       0.00       0.00       1.13
+=> passed     2000       0.00       0.00       1.13
+=> passed     4000       0.00       0.00       1.05
+=> passed     8000       0.00       0.00       1.07
+=> passed    16000       0.00       0.00       1.06
+=> passed    32000       0.00       0.00       1.07
+=> passed    64000       0.01       0.01       1.07
+=> passed   128000       0.02       0.02       1.39
+=> passed   256000       0.04       0.03       1.08
+=> passed   512000       0.08       0.08       1.08
+=> passed  1024000       0.18       0.16       1.09
+=> passed  2048000       0.39       0.36       1.07
+=> passed  4096000       0.93       0.84       1.11
+
+Estimated runtime (using last 6 measurements) = 5.71e-08 * N^1.08  (R^2 = 0.99)
+Total: 26/26 tests passed!
+
+================================================================
+
+******************************************************************************
+*  timing (substituting reference CircularSuffixArray.java)
+******************************************************************************
+
+Timing BurrowsWheeler
+*-----------------------------------------------------------
+Running 26 total tests.
+
+Tests 1-13: Timing encode() with first N character of dickens.txt
+Max allowed time is 10 seconds and <= 2x reference.
+
+                 N    student  reference      ratio
+---------------------------------------------------
+=> passed     1000       0.01       0.00       1.51
+=> passed     2000       0.00       0.00       0.80
+=> passed     4000       0.00       0.00       1.10
+=> passed     8000       0.01       0.01       0.93
+=> passed    16000       0.01       0.01       0.85
+=> passed    32000       0.01       0.01       1.11
+=> passed    64000       0.02       0.02       1.32
+=> passed   128000       0.03       0.03       1.13
+=> passed   256000       0.05       0.06       0.81
+=> passed   512000       0.08       0.11       0.74
+=> passed  1024000       0.16       0.23       0.73
+=> passed  2048000       0.37       0.48       0.78
+=> passed  4096000       0.91       1.14       0.80
+
+Estimated runtime (using last 6 measurements) = 2.73e-07 * N^0.97  (R^2 = 0.98)
+
+Tests 14-26: Timing decode() with first N character of dickens.txt
+Max allowed time is 10 seconds and <= 2x reference.
+
+                 N    student  reference      ratio
+---------------------------------------------------
+=> passed     1000       0.00       0.00       1.22
+=> passed     2000       0.00       0.00       1.23
+=> passed     4000       0.00       0.00       1.03
+=> passed     8000       0.00       0.00       0.69
+=> passed    16000       0.00       0.00       0.79
+=> passed    32000       0.00       0.00       1.16
+=> passed    64000       0.00       0.01       0.54
+=> passed   128000       0.01       0.01       0.94
+=> passed   256000       0.02       0.01       1.24
+=> passed   512000       0.02       0.02       1.02
+=> passed  1024000       0.04       0.04       1.03
+=> passed  2048000       0.15       0.14       1.09
+=> passed  4096000       0.35       0.34       1.03
+
+Estimated runtime (using last 6 measurements) = 3.32e-08 * N^1.04  (R^2 = 0.92)
