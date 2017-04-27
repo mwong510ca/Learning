@@ -1,0 +1,105 @@
+******************************************************************************
+*  memory usage
+******************************************************************************
+
+Computing memory of Percolation
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Check that total memory <= 17 N^2 + 128 N + 1024 bytes
+
+                 N        bytes
+--------------------------------------------
+=> passed       64        69928         
+=> passed      256      1114408         
+=> passed      512      4456744         
+=> passed     1024     17826088         
+==> 4/4 tests passed
+
+
+Estimated student memory = 17.00 N^2 + 0.00 N + 296.00  (R^2 = 1.000)
+
+
+Test 2 (bonus): Check that total memory <= 11 N^2 + 128 N + 1024 bytes
+   -  failed memory test for N = 64
+==> FAILED
+
+
+Total: 4/4 tests passed!
+
+================================================================
+
+
+
+Computing memory of PercolationStats
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Memory usage as a function of T for N = 100
+            (max allowed: 8 T + 128 bytes)
+
+                 T        bytes
+--------------------------------------------
+=> passed       16           48         
+=> passed       32           48         
+=> passed       64           48         
+=> passed      128           48         
+==> 4/4 tests passed
+
+
+Estimated student memory = 48.00  (R^2 = 1.000)
+
+Total: 4/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Percolation
+*-----------------------------------------------------------
+Running 9 total tests.
+
+Tests 1a-1e: Measuring runtime and counting calls to connected(), union() and
+             find() in WeightedQuickUnionUF.
+
+
+For each N, a percolation object is generated and sites are randomly opened
+until the system percolates. If you do not pass the correctness tests, these
+results may be meaningless.
+
+                                                 2 * connected()
+                 N   seconds       union()              + find()        constructor
+---------------------------------------------------------------------------------------------
+=> passed        8     0.00          117                   274                   2         
+=> passed       32     0.01         1477                  3220                   2         
+=> passed      128     0.04        22437                 48512                   2         
+=> passed      512     0.17       370091                790488                   2         
+=> passed     1024     0.38      1456647               3108016                   2         
+==> 5/5 tests passed
+
+Running time in seconds depends on the machine on which the script runs,
+and  varies each time that you submit. If one of the values in the table
+violates the performance limits, the factor by which you failed the test
+appears in parentheses. For example, (9.6x) in the union() column
+indicates that it uses 9.6x too many calls.
+
+
+Tests 2a-2d: This test checks whether you use a constant number of calls to
+union(), connected(), and find() per call to open(), isFull(), and percolates().
+The table below shows max(union(), connected(), find()) calls made during a
+single call to open(), isFull(), and percolates().
+
+                 N     per open()      per isOpen()    per isFull()    per percolates() 
+---------------------------------------------------------------------------------------------
+=> passed       32        8               0               1               0         
+=> passed      128        8               0               1               0         
+=> passed      512        8               0               1               0         
+=> passed     1024        8               0               1               0         
+==> 4/4 tests passed
+
+Total: 9/9 tests passed!
+================================================================
